@@ -23,7 +23,7 @@ def job():
 
 
 
-    r.html.render(timeout=20,sleep=10)
+    r.html.render(timeout=30,sleep=10)
 
     match_list = []
     print(r.status_code)
