@@ -34,7 +34,7 @@ def job():
         cote2 = r.html.find("li:nth-of-type("+str(i)+") div:nth-of-type(2) li:nth-of-type(2) button",first=True)
         cote3 = r.html.find("li:nth-of-type("+str(i)+") div:nth-of-type(2) li:nth-of-type(3) button",first=True)
 
-        if ((float(cote1.text)==1.95 and endwith5(cote2.text)==0 and endwith5(cote3.text)==0) or (float(cote3.text)==1.95 and endwith5(cote2.text)==0 and endwith5(cote1.text)==0)):
+        if ((float(cote1.text)==1.95 and endwith5(cote2.text)==0 and endwith5(cote3.text)==0) or (float(cote3.text)==1.95 and endwith5(cote2.text)==0 and endwith5(cote1.text)==0) or (float(cote1.text)==3.70 and float(cote2.text)==3.20 and float(cote3.text)==2.00)):
             requests.get("https://api.callmebot.com/whatsapp.php?phone=+221776206063&text=%s&apikey=534546" %(match.text))
         match_item = {
             'match':match.text,
